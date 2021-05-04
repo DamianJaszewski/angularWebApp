@@ -69,9 +69,15 @@
   <a routerLink="/country-details">Country details</a>
 </nav>
 
-<button (click)="getPosts()">Get Posts</button>
-<div *ngFor="let post of posts | async">
-  {{post | json}}
+<button (click)="getRegions()">Get Regions</button>
+<div *ngFor="let region of regions | async">
+  {{region.name | json}}
+  {{region.flag | json}}
+</div>
+
+<button (click)="getRegions()">Get Regions</button>
+<div class="card-container" *ngFor="let region of regions | async">
+  {{region.currencies | json}}
 </div>
 
   <!-- <app-country-list></app-country-list>

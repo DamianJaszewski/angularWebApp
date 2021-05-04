@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {Post} from './post';
-import {map} from 'rxjs/operators';
+import {Region} from './region';
 
 @Component({
   selector: 'app-root',
@@ -10,14 +9,13 @@ import {map} from 'rxjs/operators';
 })
 export class AppComponent {
   title = 'Angular webApp';
-  url = 'https://jsonplaceholder.typicode.com';
   url2 = 'https://restcountries.eu/rest/v2/region/europe';
-  posts: any;
+  regions: any;
   
   constructor(private http: HttpClient){}
   
-  getPosts(){
-    this.posts = this.http.get<Post[]>(this.url + '/posts')
+  public getRegions(){
+    this.regions = this.http.get<Region[]>(this.url2)
   }
 
 }
