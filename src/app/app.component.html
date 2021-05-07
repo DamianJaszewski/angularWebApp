@@ -77,7 +77,7 @@
 
 <button (click)="getRegions()">Get Regions</button>
 <div class="card-container" *ngFor="let region of regions | async">
-  {{region.currencies | json}}
+  {{region.currencies[0].name | json}}
 </div>
 
   <!-- <app-country-list></app-country-list>
