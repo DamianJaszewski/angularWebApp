@@ -1,2 +1,9 @@
 <p>country-list works!</p>
 
+<button routerLink="/home-screen">Back to home screen</button>
+
+<button (click)="getRegions()">Get Regions</button>
+<div *ngFor="let region of regions | async">
+  {{region.name | json}}
+  {{region.flag | json}}
+</div>

@@ -61,24 +61,13 @@
   <!-- <h2>Resources</h2>
   <p>Here are some links to help you get started:</p> -->
 
-<nav>
+<!-- <nav>
   <a routerLink="/country-list">Country list</a>
 </nav>
 
 <nav>
   <a routerLink="/country-details">Country details</a>
-</nav>
-
-<button (click)="getRegions()">Get Regions</button>
-<div *ngFor="let region of regions | async">
-  {{region.name | json}}
-  {{region.flag | json}}
-</div>
-
-<button (click)="getRegions()">Get Regions</button>
-<div class="card-container" *ngFor="let region of regions | async">
-  {{region.currencies[0].name | json}}
-</div>
+</nav> -->
 
   <!-- <app-country-list></app-country-list>
   <app-country-details></app-country-details> -->
@@ -251,13 +240,5 @@
   </svg>
 
 </div>
-
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <router-outlet></router-outlet>
