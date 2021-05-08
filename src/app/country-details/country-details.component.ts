@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+
+import { CountriesService } from './../countries.service';
 
 @Component({
   selector: 'app-country-details',
@@ -8,14 +9,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CountryDetailsComponent implements OnInit {
 
-  url2 = 'https://restcountries.eu/rest/v2/region/europe';
-  regions: any;
-  
-  constructor(private http: HttpClient){}
-  
-  public getRegions(){
-    this.regions = this.http.get(this.url2)
+  country: string = "europe";
+  countries;
+
+  constructor(service: CountriesService) {
+    this.countries = service.getRegions(this.country);
   }
+
   ngOnInit(): void {
   }
 

@@ -1,8 +1,9 @@
-<p>country-details works!</p>
+<h1>Country details</h1>
 
 <button routerLink="/country-list">Back to country list</button>
 
-<button (click)="getRegions()">Get Regions</button>
-<div class="card-container" *ngFor="let region of regions | async">
-  {{region.currencies[0].name | json}}
+
+<div *ngFor="let country of countries | async">
+  {{country.currencies[0].name | json}}
 </div>
+

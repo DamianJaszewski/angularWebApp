@@ -8,11 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeScreenComponent implements OnInit {
 
-  countrie: string = "";
+  country: string = "europe";
   countries;
 
   constructor(service: CountriesService) {
-    this.countries = service.getRegions("europe");
+    this.countries = service.getRegions(this.country);
   }
 
   ngOnInit(): void {
