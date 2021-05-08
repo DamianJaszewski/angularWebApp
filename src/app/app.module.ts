@@ -1,3 +1,4 @@
+import { CountriesService } from './countries.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
@@ -20,7 +21,9 @@ import { HomeScreenComponent } from './home-screen/home-screen.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    CountriesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

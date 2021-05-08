@@ -1,3 +1,4 @@
+import { CountriesService } from './../countries.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeScreenComponent implements OnInit {
 
-  constructor() { }
+  countrie: string = "";
+  countries;
+
+  constructor(service: CountriesService) {
+    this.countries = service.getRegions("europe");
+  }
 
   ngOnInit(): void {
   }
