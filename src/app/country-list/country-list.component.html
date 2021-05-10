@@ -2,7 +2,8 @@
 
 <button routerLink="/home-screen">Back to home screen</button>
 
-<div country = "africa" *ngFor="let country of countries | async">
+<div *ngFor="let country of countries | async">
   {{country.name | json}}
-  {{country.flag | json}}
+  <img src="{{country.flag}}">
 </div>
+
