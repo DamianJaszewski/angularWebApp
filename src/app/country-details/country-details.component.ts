@@ -9,11 +9,11 @@ import { CountriesService } from './../countries.service';
 })
 export class CountryDetailsComponent implements OnInit {
 
-  country: string = "europe";
+  region: string = "europe";
   countries;
 
   constructor(service: CountriesService) {
-    this.countries = service.getRegions(this.country);
+    this.countries = service.getRegions(this.region);
   }
 
   ngOnInit(): void {

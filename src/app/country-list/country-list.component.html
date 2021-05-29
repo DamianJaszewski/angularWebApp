@@ -1,9 +1,18 @@
 
 <h1>Country list</h1>
 
+<!-- {{test}} -->
 <button routerLink="/home-screen">Back to home screen</button>
 
-<div *ngFor="let country of countries | async">
-  {{country.name | json}}
+<!-- <div *ngFor="let question of questions">
+  {{question.question}}
+</div> -->
+<!-- 
+<ng-container *ngFor="let competence of competencies | filter : searchText">
+    <h4 class="card-title">{{competence.Name | uppercase}}</h4>
+</ng-container> -->
+
+<div *ngFor="let country of countries | filter:searchText">
+  {{country.name}}
   <img src="{{country.flag}}">
 </div>

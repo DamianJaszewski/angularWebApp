@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { CountryListComponent } from './country-list/country-list.component';
 import { CountryDetailsComponent } from './country-details/country-details.component';
 import { HomeScreenComponent } from './home-screen/home-screen.component';
+import { CountryPipe } from './country.pipe';
 @NgModule({
   declarations: [
     AppComponent,
     CountryListComponent,
     CountryDetailsComponent,
-    HomeScreenComponent
+    HomeScreenComponent,
+    CountryPipe
   ],
   imports: [
     BrowserModule,
